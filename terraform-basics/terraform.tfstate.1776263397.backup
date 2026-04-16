@@ -1,0 +1,160 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.8",
+  "serial": 11,
+  "lineage": "7b627f59-6ca9-74b8-1055-9f95badf9d40",
+  "outputs": {
+    "file_content": {
+      "value": "Server Information\n==================\nRandom ID: 07ymdaxt\nTimestamp: 2026-04-15T14:29:15Z\nUser: /home/yuri_ops/devops-lab/homelab-infra/terraform-basics\n",
+      "type": "string"
+    },
+    "file_name": {
+      "value": "server_info.txt",
+      "type": "string"
+    },
+    "fixed_file_content": {
+      "value": "Server Information (Fixed)\n==========================\nRandom ID: 07ymdaxt\nCreated: 2026-04-15T14:29:15Z\nUser: /home/yuri_ops/devops-lab/homelab-infra/terraform-basics\n",
+      "type": "string"
+    },
+    "random_id": {
+      "value": "07ymdaxt",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "server_info",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "Server Information\n==================\nRandom ID: 07ymdaxt\nTimestamp: 2026-04-15T14:29:15Z\nUser: /home/yuri_ops/devops-lab/homelab-infra/terraform-basics\n",
+            "content_base64": null,
+            "content_base64sha256": "9u7IH+S3qiSGuaSyXz0myTq4/uDEhHcKJxsIAC38mpc=",
+            "content_base64sha512": "OCSGRtJpC0T/DQzraoFNh4sYEQeEDRBZQRSnBPDs6+6vNwLyV1O0LXd5PFltTUvy54Nnr6kXTkF8ocbeRfgTZg==",
+            "content_md5": "594de5d7b639c60e53a52c49de32c4e0",
+            "content_sha1": "77d920da6f60593615acd7bcab82340838f066da",
+            "content_sha256": "f6eec81fe4b7aa2486b9a4b25f3d26c93ab8fee0c484770a271b08002dfc9a97",
+            "content_sha512": "38248646d2690b44ff0d0ceb6a814d878b181107840d10594114a704f0ecebeeaf3702f25753b42d77793c596d4d4bf2e78367afa9174e417ca1c6de45f81366",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "server_info.txt",
+            "id": "77d920da6f60593615acd7bcab82340838f066da",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "dependencies": [
+            "random_string.suffix"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "server_info_fixed",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "Server Information (Fixed)\n==========================\nRandom ID: 07ymdaxt\nCreated: 2026-04-15T14:29:15Z\nUser: /home/yuri_ops/devops-lab/homelab-infra/terraform-basics\n",
+            "content_base64": null,
+            "content_base64sha256": "+S24uyZ2BkN01RUwOO/1LYb9kcSxy8J47TM9GbDzXXQ=",
+            "content_base64sha512": "GJvMBG9SWddjhcTDz7o/Xbff7kzTYGPH3XtDOVW879afKhkxl+UNWL0t680FfXfQrBdeUUXbwKBIXpAN+3o0Ng==",
+            "content_md5": "a48defca377b0cf6fce1ba17d4868a20",
+            "content_sha1": "1a736ccae9ac89f68a67a23b3cbfdade654629cf",
+            "content_sha256": "f92db8bb2676064374d5153038eff52d86fd91c4b1cbc278ed333d19b0f35d74",
+            "content_sha512": "189bcc046f5259d76385c4c3cfba3f5db7dfee4cd36063c7dd7b433955bcefd69f2a193197e50d58bd2debcd057d77d0ac175e5145dbc0a0485e900dfb7a3436",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "server_info_fixed.txt",
+            "id": "1a736ccae9ac89f68a67a23b3cbfdade654629cf",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "dependencies": [
+            "random_string.suffix",
+            "terraform_data.creation_time"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "random_string",
+      "name": "suffix",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "id": "07ymdaxt",
+            "keepers": null,
+            "length": 8,
+            "lower": true,
+            "min_lower": 0,
+            "min_numeric": 0,
+            "min_special": 0,
+            "min_upper": 0,
+            "number": true,
+            "numeric": true,
+            "override_special": null,
+            "result": "07ymdaxt",
+            "special": false,
+            "upper": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "terraform_data",
+      "name": "creation_time",
+      "provider": "provider[\"terraform.io/builtin/terraform\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "04ea989b-3691-2402-ef4e-5d0cfeb38444",
+            "input": {
+              "value": "2026-04-15T14:29:15Z",
+              "type": "string"
+            },
+            "output": {
+              "value": "2026-04-15T14:29:15Z",
+              "type": "string"
+            },
+            "triggers_replace": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
